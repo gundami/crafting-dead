@@ -34,6 +34,7 @@ public class ParachuteMobEffect extends Effect {
 
   @Override
   public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
+    livingEntity.resetFallDistance();
     if (livingEntity.isOnGround()) {
       livingEntity.removeEffect(ModMobEffects.PARACHUTE.get());
       return;
